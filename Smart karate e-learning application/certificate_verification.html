@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-dojo</title>
+    <link href="css/literature_servey.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Research Problem</h1>
+        <ul class="custom-list">
+          <!-- <li> -->
+          <!-- </li> -->
+  
+          <li>
+            In an online learning environment, it is crucial to ensure that learners’ progress is tracked accurately and that certificates issued at the end of courses reflect true skill levels. Traditional LMS platforms often rely on manual grading or self-reported achievements, which may not fully reflect the learner's actual abilities. Moreover, there are concerns regarding the authenticity of certificates and potential fraud in online certifications.
+          </li>
+            
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <h1>Research Objective</h1>
+        <ul class="custom-list">
+
+          <li>
+            This component aims to develop a comprehensive Learning Management System (LMS) for Karate, incorporating sensor-based performance assessments, structured progress tracking, and blockchain-secured certificate verification. The LMS will be designed to monitor learners’ progress in real-time using IoT sensors, while also adhering to traditional Karate grading systems for a credible assessment process. The system will provide a range of learning modules that adapt to the user's proficiency, guiding them through beginner to advanced levels. It will also offer personalized feedback to address specific areas for improvement. The blockchain component will ensure the security and authenticity of certifications, which will be issued upon successful completion of course milestones. This approach will not only make the system more reliable but also help create a robust ecosystem for remote Karate learning, enabling both trainers and learners to engage with secure and verified learning paths. The LMS will focus on creating an accessible, scalable, and credible e-learning environment that adheres to the traditional principles of Karate while embracing the advantages of modern technology.
+
+            </li>
+       
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <h1>Research Focus</h1>
+        <ul class="custom-list">
+
+          <li>
+            This component involves designing an LMS that leverages sensor data for real-time performance tracking and integrates blockchain technology for secure and verifiable certificates. Blockchain can be used to prevent certificate forgery and ensure the integrity of the learner's achievement. The research challenge is creating an automated system that can analyze sensor data in real time and match it with predefined grading rubrics to issue certificates that accurately reflect the learner’s skill level.
+
+            </li>
+       
+        </ul>
+      </div>
+
+
+    <div class="container">
+      <h1>Research Gap</h1>
+      <ul class="custom-list">
+        <!-- <li> -->
+        <!-- </li> -->
+
+        <li>
+            1. No Real-Time Physical Skill Assessment in LMSs : 
+            Current learning platforms are geared towards theoretical knowledge and lack the ability to assess dynamic, real-world physical skills like timing, posture, or form.
+
+        </li>
+
+        <li>
+            2. Wearable Tech Not Integrated into LMS:
+            While wearables are used in health and sports, they are not meaningfully integrated into structured e-learning systems for Karate or physical education.
+
+        </li>
+
+        <li>
+            3. Disconnection Between Performance Data and Certification: Certification is often based on video views or quiz results rather than verified physical performance, making digital badges unreliable indicators of skill mastery.
+        </li>
+        <li>
+            4.Blockchain for Certification is Underutilized:
+            Despite its potential to provide tamper-proof, verifiable digital credentials, blockchain has not been applied to performance-based disciplines like Karate in any meaningful way.
+
+        </li>
+        <li>
+            5.Traditional Pedagogy is Not Reflected in Digital Systems: Current LMS structures do not reflect the structured grading, philosophical depth, and performance evaluation used in traditional martial arts instruction.
+
+        </li>
+
+
+          
+      </ul>
+    </div>
+
+    <div class="container">
+        <h1>Methodology</h1>
+        <ul class="custom-list">
+
+          <li>
+Data collection 
+<ul>The study involves karate students who are beginners and those with some experience. They take
+part inboth online(remote) and inperson training sessions. To check their skills and progress, the studen
+ts undergo various tests. The study collects accurate movement data using the sensors. These
+sensors are used to monitor key performance elements such as joint movement, number of
+steps, how smooth the movements are, and how precise they are. This data helps analyze the students'
+techniques and compare them to the standards set by experts for proper evaluation.
+</ul>
+            </li>
+
+      <li>Movement and analysis
+        <ul>
+            The system uses built-in sensors (gyroscope, accelerometer) in mobile devices to capture real-time
+movement data such as elbow and knee angles, step counts, and smoothness. This data is compared
+against expert standards to evaluate the student's performance.
+After collecting data, preprocessing is applied to clean and normalize it, removing noise and ensuring
+reliable inputs for the machine learning (ML) model. The system then extracts key features (e.g., joint
+speed, elbow accuracy, movement smoothness) for comparison with the expert reference model.
+The ML engine is trained using expert movement data and can analyze students' real-time performance by
+calculating accuracy scores. Based on these scores, performance is categorized as “Excellent,” “Good,”
+“Fair,” or “Needs Improvement.” Students must achieve at least 85% accuracy to pass.
+        </ul>
+      </li>
+      <li>
+        Certificate Generation and Blockchain Integration 
+        <ul>
+            The system automatically generates a digital certificate for students fulfilling a preestablished set of
+parameters. These include watching at least 80 percent of the instructional videos for a given level of the
+course (Beginner, Intermediate, or Advanced), scoring 70 percent and above in quizzes, and achieving at
+least 85-percent accuracy in real-time sensor-based performance tests. With all conditions satisfied, the
+backend application now compiles and generates a digital certificate reflecting the student's learning and
+performance data.
+        </ul>      </li>
+        <li>Hash code generation 
+            <ul>
+                Upon creation of the certificate, a cryptographic hash based on the security hashing algorithm, either SHA-
+256 or other such algorithms, is generated. This hash represents a digital fingerprint unique to that certificate
+content. A slight change in the certificate for any reason (for e.g., change of name, date, or score) will
+generate a completely different hash, and this will trigger the detection of tampering or forgery. Therefore,
+it guarantees data integrity without storing solely the full certificate on the blockchain, thus being
+detrimental in terms of storage and bandwidth
+            </ul>
+        </li>
+        <li>
+            Digital certificate verification
+            <ul>
+                Using the public verification model of the blockchain allows smooth validation of the certificate. When
+                someone, a recruiter, institution, or verifier scans the QR code on the certificate, it will be directed to a
+                blockchain explorer or validation portal. This interface retrieves the stored hash from the blockchain while
+                recalculating the hash from the uploaded or provided certificate document. If both hashes match, the
+                certificate is validated as genuine and unaltered. If they do not match, the system flags the certificate for
+                compromise.
+            </ul>
+        </li>
+   
+            
+
+        </ul>
+      </div>
+
+
+      
+    
+
+  </body>
+</html>

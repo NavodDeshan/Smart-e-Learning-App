@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-dojo</title>
+    <link href="css/literature_servey.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Research Problem</h1>
+        <ul class="custom-list">
+          <!-- <li> -->
+          <!-- </li> -->
+  
+          <li>
+            While traditional coaching methods focus on instructor-led feedback, sensor data provides the opportunity to deliver real-time insights based on the learner's performance. However, the challenge lies in extracting actionable insights from large datasets of movement and performance data. How can this data be analyzed to provide personalized feedback that improves skill development.
+
+          </li>
+            
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <h1>Research Objective</h1>
+        <ul class="custom-list">
+
+          <li>
+            The objective of this component is to harness data analytics for enhancing the learning experience in Karate training. By collecting real-time data from wearable sensors, the system will track a practitioner’s movements and compare them against expert performance benchmarks to detect discrepancies. This sensor data will serve as the foundation for providing real-time feedback, identifying errors in stance, timing, and power delivery. Additionally, the system will use machine learning models to predict areas of weakness and offer personalized suggestions for improvement. A key aspect of this research is to improve the accuracy of sensor-based performance monitoring and use these insights to offer corrective feedback during training sessions. This will significantly improve the effectiveness of remote learning by ensuring that students receive immediate, actionable feedback typically reserved for in-person instruction. Furthermore, the system will include a comprehensive analytics dashboard that allows both learners and instructors to track progress, identify trends, and make informed decisions about training adjustments.
+
+
+            </li>
+       
+        </ul>
+      </div>
+
+
+      <div class="container">
+        <h1>Research Focus</h1>
+        <ul class="custom-list">
+
+          <li>
+            The research needs to explore various data analytics techniques such as clustering, trend analysis, and predictive modeling. These techniques can be employed to assess not only the physical aspects of performance, such as strength and speed, but also the cognitive aspects of training, such as decision-making and technique recall. By analyzing patterns in data over time, the system can identify areas for improvement and suggest targeted exercises that address the learner's weaknesses.
+            </li>
+       
+        </ul>
+      </div>
+
+
+    <div class="container">
+      <h1>Research Gap</h1>
+      <ul class="custom-list">
+        <!-- <li> -->
+        <!-- </li> -->
+
+        <li>
+            1. Surface-Level Use of Analytics in Martial Arts Contexts : 
+            Most research around sports analytics focuses on general fitness and physical activity, not the unique biomechanical, cultural, and pedagogical intricacies of Karate.
+
+        </li>
+
+        <li>
+         2. Neglected Nuances in Karate Movements :
+         Existing systems fail to capture or evaluate critical factors like rhythm, timing, balance, and subtle form differences, which are vital for authentic martial arts mastery.        </li>
+
+        <li>
+        3. Lack of Integrated Tech Systems : 
+        Research often explores 3D modeling and sensor technologies independently rather than in integrated environments that can provide synchronized visual and data-driven feedback.        </li>
+        <li>
+          4. No Longitudinal Studies on Technology Impact : 
+          There is an absence of long-term studies examining whether sensor-based or AI-supported training results in lasting improvement compared to traditional dojo training.
+        </li>
+        <li>
+            5. Limited Understanding of Learner Interactions : 
+            There is little understanding of how different user groups (by age, experience, learning style) engage with these technologies and whether the feedback is motivating or overwhelming.
+        </li>
+
+    <li>
+        6. Accessibility Challenges : 
+        Existing systems rely on expensive technology, making them inaccessible to underfunded dojos or learners in low-resource settings. Affordable alternatives and inclusive design are rarely explored.
+    </li>
+
+
+          
+      </ul>
+    </div>
+
+    <div class="container">
+        <h1>Methodology</h1>
+        <ul class="custom-list">
+
+          <li>
+            This study employs a mixed-methods research design combining quantitative data analysis with
+            quantitative user experience to evaluate the effectiveness of the smart e – learning karate application. The
+            research follows a systematic development and validation approach spanning four distinct phases. System
+            architecture development, data collection and processing framework implementation, application
+            development and integration and performance evaluation and validation.
+            </li>
+
+            <li>
+ Power management : 
+ <ul>To ensure reliable, unobtrusive operation, each wearable sensor integrates a custom 750mAh Li-Po battery
+module with voltage regulation, providing ~6 hours of continuous use. The sensor node, weighing just 28g,
+stays below the 30g comfort threshold. A TPS61090 boost converter ensures a stable 3.3V output despite
+battery discharge, while a BQ24075 IC manages charging, power-path routing, and protection (overcharge,
+short-circuit, IEC 62133-compliant). Charging uses a CC/CV profile with full recharge in 90 minutes via
+5V USB.</ul>
+
+            </li>
+
+            <li>
+                Data collection framework
+                <ul>
+sensor calibration : 
+A standardized 3-step calibration (neutral stance, axis rotations, max-effort punch) aligns sensor readings
+and compensates for drift, alignment, and individual variability.
+
+                </ul>
+                <ul>
+                    Data capture : 
+                    Each MPU6050 sensor captures 3-axis acceleration and angular velocity at 100 Hz, enabling detailed
+motion analysis. Accelerometer is set to ±16g and gyroscope to ±2000°/s for high-impact detection.
+Onboard DMP and optimized settings enhance signal quality.Sensor nodes synchronize via a 2Hz master-slave protocol, maintaining <±1.2ms clock drift. Data
+integrity is ensured using CRC-16 and a 30-second local buffer for loss prevention.Sensors placed on wrists, ankles, waist, and upper back generate 6D motion profiles, enabling the system
+to distinguish between correct and flawed techniques providing rich input for machine learning-based
+performance evaluation.
+                </ul>
+            </li>
+             
+            
+            <li>
+                The system uses a hybrid neural network tailored for biomechanical data, combining two branches: a 1D
+                CNN (four layers with 32–256 filters) for local motion pattern detection and a Bidirectional LSTM (three
+                layers, 128 units each) for sequence modeling. These merge via an attention mechanism, followed by
+                three dense layers (512, 256, 128 neurons) with ReLU and dropout, outputting five performance metrics.
+                25
+                Trained on 1,200 expert-executed techniques with synchronized 3D motion capture, the model uses Adam
+                optimizer (lr=0.0001) and MSE loss with early stopping. Output metrics include: technique accuracy,
+                efficiency, power, balance, and timing. Cross-validation yielded 92.7% classification accuracy and 4.3%
+                MAE compared to judge evaluations.
+            </li>
+        </ul>
+      </div>
+
+
+      
+    
+
+  </body>
+</html>
